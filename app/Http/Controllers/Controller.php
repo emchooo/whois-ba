@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use GuzzleHttp\Cookie\CookieJar;
 use Symfony\Component\DomCrawler\Crawler;
 use Laravel\Lumen\Routing\Controller as BaseController;
-// use thiagoalessio\TesseractOCR\TesseractOCR;
+use thiagoalessio\TesseractOCR\TesseractOCR;
 
 class Controller extends BaseController
 {
