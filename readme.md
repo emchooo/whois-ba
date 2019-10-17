@@ -1,21 +1,20 @@
-# Lumen PHP Framework
+# WHOIS domain lookup for .BA domains through terminal
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+## What is this?
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+This is fun open-source side project for checking .BA domain through terminal. Response of WHOIS lookup on official website [NIC.ba](nic.ba) is returned as image, so it is not possible to scrape WHOIS data for .BA domains. So here we use OCR software to convert WHOIS data from image to text.
 
-## Official Documentation
+## How to use?
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+Ping whois.div.ba/{domain}
 
-## Security Vulnerabilities
+Example
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```
+curl whois.div.ba/nic.ba
+```
 
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## What we use?
+- [Lumen](https://lumen.laravel.com/) - PHP micro-framework
+- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) - OCR Engine
+- [Tesseract OCR for PHP](https://github.com/thiagoalessio/tesseract-ocr-for-php) - Tesseract OCR PHP wrapper
