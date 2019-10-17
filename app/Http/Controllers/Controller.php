@@ -50,7 +50,14 @@ class Controller extends BaseController
 
         $image = $this->getImage($response);
 
-        echo "<img src='$image'>";
+        $saved_image_name = $domain . '-' . date('Y-m-d-H-i-s') . '.png';
+        $saved_image_path = 'images/' . $saved_image_name;
+
+        copy($image, $saved_image_path);
+
+        $text = (new TesseractOCR($saved_image_path))->lang('bos')->run();
+
+        return $text;
 
     }
 
