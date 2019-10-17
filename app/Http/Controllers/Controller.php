@@ -50,6 +50,10 @@ class Controller extends BaseController
 
         $image = $this->getImage($response);
 
+        if(!$image) {
+            return 'Ova domena nije registrovana';
+        }
+
         $saved_image_name = $domain . '-' . date('Y-m-d-H-i-s') . '.png';
         $saved_image_path = 'images/' . $saved_image_name;
 
