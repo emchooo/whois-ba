@@ -12,7 +12,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return 'hehe';
+    return 'Try whois.div.ba/{domain}.ba';
 });
 
-$router->get('ping/{domain}', 'Controller@index');
+$router->get('/{domain}', 'Controller@index');
